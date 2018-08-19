@@ -15,3 +15,7 @@ else
     rm -rf "$full_build_directory"
     exit 1
 fi
+
+
+echo "Handling npm dependencies"
+bash scripts/npm.sh
