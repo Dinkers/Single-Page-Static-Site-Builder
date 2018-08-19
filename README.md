@@ -1,1 +1,1 @@
-# Single-Page-Static-Site-Builder
+# Static Site Builder
