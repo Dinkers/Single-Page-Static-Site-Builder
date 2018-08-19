@@ -15,4 +15,4 @@ else
 fi
 
 
-echo "$project_name" "$author" "$build_directory" "$github_url" "$project_name_directory" "$full_build_directory"
+echo "$project_name" "$author" "$github_url" "$full_build_directory"

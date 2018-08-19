@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read project_name author build_directory github_url project_name_directory full_build_directory <<< $(bash scripts/setup.sh)
+read project_name author github_url full_build_directory <<< $(bash scripts/setup.sh)
 
 
 echo "Building $project_name for $author in $full_build_directory"
@@ -32,7 +32,7 @@ fi
 if [ "${github_url:-}" ]; then
 
     echo "Pushing initial $project_name to Github"
-    bash scripts/github.sh
+    bash scripts/github.sh $full_build_directory $github_url
 
     if [ $? -eq 0 ]; then
         echo "Successfully pushed $project_name to Github at $github_url"
