@@ -8,7 +8,7 @@ full_build_directory=$5
 
 mkdir $full_build_directory
 
-cp ./build_files/* "$full_build_directory"
+cp -R ./build_files/* "$full_build_directory"
 
 # build package.json
 sed -i.bak "s/PROJECT_NAME/$project_name/g" "$full_build_directory/package.json" && rm "$full_build_directory/package.json.bak"
