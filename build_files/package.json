@@ -1,5 +1,6 @@
 {
   "name": "PROJECT_NAME",
+  "author": "AUTHOR",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
@@ -16,7 +17,6 @@
     "type": "git",
     "url": "git+GITHUB_URL"
   },
-  "author": "AUTHOR",
   "license": "ISC",
   "bugs": {
     "url": "GITHUB_URL/issues"
