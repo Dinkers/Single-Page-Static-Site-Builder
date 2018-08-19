@@ -42,3 +42,8 @@ if [ "${github_url:-}" ]; then
     fi
 
 fi
+
+
+echo "Starting local development server"
+cd $full_build_directory
+grunt
