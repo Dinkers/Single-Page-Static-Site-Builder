@@ -24,3 +24,5 @@ if [ $? -ne 0 ]; then
 
 fi
 
+cd $full_build_directory
+npm install
