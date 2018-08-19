@@ -1,5 +1,10 @@
 #!/bin/bash
 
+project_name=$1
+author=$2
+github_url=$4
+full_build_directory=$5
+
 mkdir $full_build_directory
 
 cp ./build_files/* "$full_build_directory"
