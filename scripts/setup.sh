@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-#### Set up ####
-
 read -p "Project name: " project_name
 read -p "Author: " author
 read -p "Directory to build in: " build_directory
@@ -17,22 +14,5 @@ else
     full_build_directory="$build_directory/$project_name_directory"
 fi
 
-echo "Building $project_name for $author in $full_build_directory"
 
-
-#### Build ####
-
-mkdir $full_build_directory
-
-cp ./boilerplate/* $full_build_directory
-
-sed -i.bak "s/PROJECT_NAME/$project_name/g" "$full_build_directory/package.json" && rm "$full_build_directory/package.json.bak"
-
-####  npm  #####
-
-
-
-#### Github ####
-
-
-#### Grunt #####
+echo "$project_name" "$author" "$build_directory" "$github_url" "$project_name_directory" "$full_build_directory"
