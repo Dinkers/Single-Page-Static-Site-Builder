@@ -19,3 +19,13 @@ fi
 
 echo "Handling npm dependencies"
 bash scripts/npm.sh
+
+if [ $? -eq 0 ]
+then
+    echo "Successfully installed npm dependencies for $project_name"
+else
+    echo "Could not install npm dependencies for $project_name" >&2
+    echo "Cleaning up"
+    rm -rf "$full_build_directory"
+    exit 1
+fi
