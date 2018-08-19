@@ -1,3 +1,7 @@
+#!/bin/bash
+
+full_build_directory=$1
+
 
 npm -v
 

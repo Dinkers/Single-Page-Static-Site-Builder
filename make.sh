@@ -17,7 +17,7 @@ fi
 
 
 echo "Handling npm dependencies"
-bash scripts/npm.sh
+bash scripts/npm.sh $full_build_directory
 
 if [ $? -eq 0 ]; then
     echo "Successfully installed npm dependencies for $project_name"
