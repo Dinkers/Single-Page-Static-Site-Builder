@@ -1,3 +1,12 @@
+.PHONY: setup files npm git grunt
+
+
+all:
+	@-${MAKE} setup
+	@-${MAKE} files
+	@-${MAKE} npm
+	@-${MAKE} git
+	@-${MAKE} grunt
 
 setup:
 	@echo "What is the name of the project"
