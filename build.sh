@@ -12,9 +12,9 @@ project_name_directory=$(echo $project_name | tr '[:upper:]' '[:lower:]' | tr -s
 
 if [ ${build_directory:0:1} == "." ]
 then
-    full_build_directory=$build_directory$project_name_directory
+    full_build_directory="$build_directory$project_name_directory"
 else
-    full_build_directory=$build_directory/$project_name_directory
+    full_build_directory="$build_directory/$project_name_directory"
 fi
 
 echo "Building $project_name for $author in $full_build_directory"
@@ -24,7 +24,9 @@ echo "Building $project_name for $author in $full_build_directory"
 
 mkdir $full_build_directory
 
+cp ./boilerplate/* $full_build_directory
 
+sed -i.bak "s/PROJECT_NAME/$project_name/g" "$full_build_directory/package.json" && rm "$full_build_directory/package.json.bak"
 
 ####  npm  #####
 
