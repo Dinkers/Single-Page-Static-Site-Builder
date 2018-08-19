@@ -46,4 +46,5 @@ fi
 
 echo "Starting local development server"
 cd $full_build_directory
+echo "Enter the command <grunt> from this directory to start the server in the future"
 grunt
