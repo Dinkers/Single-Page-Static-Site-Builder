@@ -2,11 +2,12 @@
 
 project_name=$1
 author=$2
-github_url=$4
-full_build_directory=$5
+github_url=$3
+full_build_directory=$4
 
+echo "BUILDING IN $full_build_directory"
 
-mkdir $full_build_directory
+mkdir "$full_build_directory"
 
 cp -R ./build_files/* "$full_build_directory"
 
