@@ -29,7 +29,7 @@ else
 fi
 
 
-if [ "${github_url:-}" ]; then
+if [ ! -z "$github_url" ]; then
 
     echo "Pushing initial $project_name to Github"
     bash scripts/github.sh $full_build_directory $github_url
