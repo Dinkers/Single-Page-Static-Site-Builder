@@ -2,8 +2,11 @@
 
 read project_name author github_url full_build_directory <<< $(bash scripts/setup.sh)
 
+echo "PROJECT NAME: $project_name AUTHOR: $author GITHUB URL: $github_url FULL BUILD DIRECTORY: $full_build_directory"
 
+echo
 echo "Building $project_name for $author in $full_build_directory"
+echo
 bash scripts/build.sh $project_name $author $github_url $full_build_directory
 
 if [ $? -eq 0 ]; then
@@ -31,7 +34,7 @@ fi
 
 if [ ! -z "$github_url" ]; then
 
-    echo "Pushing initial $project_name to Github"
+    echo "Pushing initial $project_name to Github at $github_url"
     bash scripts/github.sh $full_build_directory $github_url
 
     if [ $? -eq 0 ]; then
