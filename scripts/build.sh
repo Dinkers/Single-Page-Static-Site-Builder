@@ -6,7 +6,7 @@ github_url=$3
 full_build_directory=$4
 
 
-mkdir "$full_build_directory"
+mkdir -p "$full_build_directory"
 
 cp -R ./build_files/* "$full_build_directory"
 
