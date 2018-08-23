@@ -1,6 +1,6 @@
 #!/bin/bash
-
-read project_name author github_url full_build_directory <<< $(bash scripts/setup.sh)
+. ./scripts/setup.sh
+# read project_name author github_url full_build_directory <<< $(bash scripts/setup.sh)
 
 echo "PROJECT NAME: $project_name AUTHOR: $author GITHUB URL: $github_url FULL BUILD DIRECTORY: $full_build_directory"
 
