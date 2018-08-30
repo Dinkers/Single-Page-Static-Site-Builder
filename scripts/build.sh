@@ -2,9 +2,12 @@
 
 project_name=$1
 author=$2
-github_url=$3
-full_build_directory=$4
+full_build_directory=$3
+github_url=$4
 
+if [ ! -z "$github_url" ]; then
+    github_url=""
+fi
 
 mkdir -p "$full_build_directory"
 

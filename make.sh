@@ -5,7 +5,7 @@ source ./scripts/setup.sh
 echo
 echo "Building $project_name for $author in $full_build_directory"
 echo
-bash scripts/build.sh $project_name $author $github_url $full_build_directory
+bash scripts/build.sh "$project_name_directory" "$author" "$full_build_directory" "$github_url"
 
 if [ $? -eq 0 ]; then
     echo
@@ -23,7 +23,7 @@ fi
 echo
 echo "Handling npm dependencies"
 echo
-bash scripts/npm.sh $full_build_directory
+bash scripts/npm.sh "$full_build_directory"
 
 if [ $? -eq 0 ]; then
     echo
@@ -44,7 +44,7 @@ if [ ! -z "$github_url" ]; then
     echo
     echo "Pushing initial $project_name to Github at $github_url"
     echo
-    bash scripts/github.sh $full_build_directory $github_url
+    bash scripts/github.sh "$full_build_directory" "$github_url"
 
     if [ $? -eq 0 ]; then
         echo
