@@ -11,6 +11,7 @@ fi
 
 mkdir -p "$full_build_directory"
 
+cp ./build_files/.* "$full_build_directory" 2>/dev/null
 cp -R ./build_files/* "$full_build_directory"
 
 # build package.json
