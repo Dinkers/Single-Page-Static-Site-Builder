@@ -13,3 +13,4 @@ then
 else
     full_build_directory="$build_directory/$project_name_directory"
 fi
+

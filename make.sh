@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ./scripts/setup.sh
+source ./scripts/setup.sh
 
 echo
 echo "Building $project_name for $author in $full_build_directory"
