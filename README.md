@@ -46,3 +46,21 @@ grunt
 ```
 
 The server can be stopped by pressing ctrl+c on the keyboard.
+
+### File Structure
+
+```
+- index.html
+- gruntfile.js
+- package.json
+- README.md
+- js/
+	- main.js
+- styles/
+	- css/
+	- sass/
+		- styles.sass
+- assets/
+	- fonts/
+	- images/
+```
